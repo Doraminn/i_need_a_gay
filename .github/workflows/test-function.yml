@@ -15,4 +15,6 @@ jobs:
           # default. This repository pins its toolchain elsewhere, so the
           # path has to be named or the step fails before any test runs.
       - run: pip install pytest
+      - run: pip install databricks
+      - run: pip install pyspark
       - run: pytest -m "not spark" -q
