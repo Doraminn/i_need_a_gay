@@ -5,8 +5,8 @@ from contextlib import contextmanager
 
 
 # try:
-from databricks.connect import DatabricksSession
-from databricks.sdk import WorkspaceClient
+# from databricks.connect import DatabricksSession
+# from databricks.sdk import WorkspaceClient
 from pyspark.sql import SparkSession
 import pytest
 import json
@@ -27,7 +27,7 @@ def spark() -> SparkSession:
             df = spark.createDataFrame([(1,)], ["x"])
             assert df.count() == 1
     """
-    return DatabricksSession.builder.getOrCreate()
+    # return DatabricksSession.builder.getOrCreate()
 
 
 @pytest.fixture()
