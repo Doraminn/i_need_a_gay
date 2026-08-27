@@ -17,4 +17,5 @@ jobs:
       - run: pip install pytest
       - run: pip install databricks-connect
       - run: pip install pyspark
+      - run: pip install --upgrade "zstandard>=0.25.0"
       - run: pytest -m "not spark" -q
